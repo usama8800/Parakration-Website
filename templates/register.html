@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>Parakration V</title>
+        {{ include('/blocks/head.twig', {css:[{name:"register"}]}) }}
+	</head>
+
+	<body>
+		{{ include('/blocks/preloader.twig') }}
+    
+        {{ include('/blocks/navbar.twig', {options:[
+            {text:"Home", link:"/index.php"},
+            {text:"Registrations", link:"#registrations", active:""},
+            {text:"Payments", link:"#fees"},
+            {text:"Form", link:"#form"}
+        ]}) }}
+
+        <section id="registrations">
+            <div class="container">
+                <div class="row">
+                    <div class="wow zoomIn heading text-center col-md-offset-2 col-md-8 col-xs-12">
+                        <div class="sectionTitle">
+                            <h2>
+                                Registrations
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                {% if submitted %}
+                    {% if database_error %}
+                <div class="row alert alert-danger">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    {{ database_error }}
+                    There was an internal problem. Your form could not be submitted.
+                </div>
+                    {% else %}
+                <div class="row alert alert-success">
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+                    Thank you, your form has been submitted.
+                    {% for file in upload_errs %}
+                    <div class="well well-sm alert-danger">{{ file }} could not be uploaded</div>
+                    {% endfor %}
+                </div>
+                    {% endif %}
+                {% endif %}
+                <div class="row">
+                    <div class="wow slideInLeft col-md-10 col-md-offset-1 col-xs-12 text-left">
+                        <h3><small>The registration</small> process</h3>
+                        <ol>
+                            <li>Fill in your team's details in the form below. Make sure that you write down all the required details, and that no important information is left out.</li>
+                            <li>Each delegate will participate in five events. Episteme and Ideas in Action are compulsory. Three events will be of your choice.</li>
+                            <li>One delegation can have a maximum of six delegates.</li>
+                            <li>Once you press the register button, a 'thank you' message should appear on your screen.</li>
+                            <li>For questions and queries about accomodation for participants from schools / institutes outside of lahore, contact Raheem Zafar at 03008462977</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="wow slideInRight col-md-10 col-md-offset-1 col-xs-12 text-left">
+                        <h3><small>Points to</small> remember</h3>
+                        <ol>
+                            <li>Each delegation can only have ONE head delegate.</li>
+                            <li>The deadline for submitting the form is 10th November.</li>
+                            <li>The delegation fee and the participation fee for all delegates must be paid at LGS Paragon. The school office will be open for delegates to visit on work days between the hours of 8 a.m and 4 p.m.</li>
+                            <li>The head delegate must be in contact with the registration team at the time of payment.</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="wow slideInRight col-md-10 col-md-offset-1 col-xs-12 text-left">
+                        <h3>Contact</h3>
+                    </div>
+                    <div class="row">
+                    <div class="wow slideInRight col-md-5 col-md-offset-1 col-xs-12 text-left">
+                        <h3><small>Director General</small></h3>
+                        <ul>
+                            Raheem Zafar<br>0300-8462977
+                        </ul>
+                    </div>
+                    <div class="wow slideInRight col-md-5 col-md-offset-1 col-xs-12 text-left">
+                        <h3><small>Director Registrations</small></h3>
+                        <ul>
+                            Muneeb Kashif<br>0333-4600488
+                        </ul>
+                    </div>
+                </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-xs-11 col-xs-offset-1">
+                        <span>Disclaimer: The management will not be responsible for any clashes. Please review the schedule before a participant is registered for multiple events.</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="fees">
+            <div class="container">
+                <div class="row">
+                    <div class="wow slideInLeft col-md-10 col-md-offset-1 col-xs-12 text-left">
+                        <h3>Fee <small>structure</small></h3>
+                        <div class="container" id="fee-table">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-5 col-md-4">Delegation Fee</div>
+                                <div class="col-xs-6 col-sm-7 col-md-8">PKR 2000</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-5 col-md-4">Private Fee</div>
+                                <div class="col-xs-6 col-sm-7 col-md-8">PKR 1000</div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-5 col-md-4">Delegate Fee </div>
+                                <div class="col-xs-6 col-sm-7 col-md-8">PKR 3000</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="wow slideInRight col-md-10 col-md-offset-1 col-xs-12 text-left">
+                        <h3>Payment <small>method</small></h3>
+                        <ul>
+                            <li>Schools/institutions in Lahore must pay in cash which is to be submitted to the administration office at LGS Paragon's campus.</li>
+                            <li>Schools/institutions from outside of Lahore will be paying through a bank draft in the name of “Naila Wajid”. The bank draft or cash submitted will contain payment for all the school/institution’s registration fee and later participation fee.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="form">
+            <div class="container">
+                <div class="row">
+                    <div class="wow zoomIn heading text-center col-md-offset-2 col-md-8 col-xs-12">
+                        <div class="sectionTitle">
+                            <h2>
+                                <small>Registration</small>  Form
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="form-horizontal container" id="registration-form" action="/register.php" method="POST" enctype= "multipart/form-data">
+                <div class="row">
+                    <div class="col-xs-12 col-md-10 col-md-offset-1">
+                        <h3>Institution Details</h3>
+                    </div>
+                </div>
+                {{ include('/blocks/formGroup.twig', {type:"text", label:"Institution / Private Name", id:"institution-name", attrs:'data-validation="required"'}) }}
+                {{ include('/blocks/formGroup.twig', {type:"text", label:"Branch", id:"institution-branch"}) }}
+                {{ include('/blocks/formGroup.twig', {type:"text", label:"Institution's Email", id:"institution-email", attrs:'data-validation="required email"'}) }}
+                {{ include('/blocks/formGroup.twig', {type:"text", label:"Postal Address", id:"institution-address", attrs:'data-validation="required"'}) }}
+                {{ include('/blocks/formGroup.twig', {type:"radio", label:"Accomodations Required", options:[
+                    {name: "institution-accomodations", id:"institution-accomodations-yes", value:"Yes"},
+                    {name: "institution-accomodations", id:"institution-accomodations-no", value:"No", attrs:"checked"}
+                ]}) }}
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-10 col-md-offset-1">
+                        <h3>Staff Advisor <tiny>Optional</tiny></h3>
+                    </div>
+                </div>
+                {{ include('/blocks/formGroup.twig', {type:"text", label:"Staff Advisor's Name", id:"staff-advisor-name", attrs:'data-validation="custom" data-validation-regexp="^[- a-zA-Z\']+$" data-validation-error-msg="That is not a valid name" data-validation-optional="true"'}) }}
+                {{ include('/blocks/formGroup.twig', {type:"text", label:"Cell Number", id:"staff-advisor-number", attrs:'data-validation="number" data-validation-optional="true"'}) }}
+                {{ include('/blocks/formGroup.twig', {type:"text", label:"ID Card Number", id:"staff-advisor-nic", attrs:'data-validation="number" data-validation-optional="true"'}) }}
+                {{ include('/blocks/formGroup.twig', {type:"text", label:"Email Address", id:"staff-advisor-email", attrs:'data-validation="email" data-validation-optional="true"'}) }}
+                
+                <div id="events">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-10 col-md-offset-1">
+                            <h3>Events</tiny></h3>
+                        </div>
+                    </div>
+                    {{ include('/blocks/formGroup.twig', {type:"event", label:"Event 1", id:"event-1", attrs:'data-validation="required"'}) }}
+                    {{ include('/blocks/formGroup.twig', {type:"event", label:"Event 2", id:"event-2"}) }}
+                    {{ include('/blocks/formGroup.twig', {type:"event", label:"Event 3", id:"event-3"}) }}
+                </div>
+
+                <div id="delegate-1">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-10 col-md-offset-1">
+                            <h3>Head Delegate</tiny></h3>
+                        </div>
+                    </div>
+                    {{ include('/blocks/formGroup.twig', {type:"text", label:"Head Delegate Name", id:"delegate-1-name", attrs:'data-validation="custom" data-validation-regexp="^[- -zA-Z\']+$" data-validation-error-msg="That is not a valid name"'}) }}
+                    {{ include('/blocks/formGroup.twig', {type:"file", label:"Photograph", id:"delegate-1-pic", attrs:'accept="image/*"'}) }}
+                    {{ include('/blocks/formGroup.twig', {type:"text", label:"Head Delegate Number", id:"delegate-1-number", attrs:'data-validation="custom" data-validation-regexp="\\+?[0-9\\- ]+$" data-validation-error-msg="That is not a valid number"'}) }}
+                    {{ include('/blocks/formGroup.twig', {type:"text", label:"Head Delegate Email", id:"delegate-1-email", attrs:'data-validation="email"'}) }}
+                </div>
+            
+                <div class="row" id="form-buttons">
+                    <div class="col-xs-12 col-md-9 col-md-offset-2">
+                        <br>
+                        <div id="loading-icon"><img src="/static/img/loading.gif" /></div>
+                        <br><br>
+                        <input id="add-delegate" number="2" class="btn btn-default" type="button" value="Add Delegate">
+                        <input id="remove-delegate" class="btn btn-default disabled" type="button" value="Remove Delegate">
+                        <br><br>
+                        <input type="submit" id="submit-form" class="btn btn-default" value="Register">
+                    </div>
+                </div>
+            </form>
+        </section>
+        
+		{{ include('/blocks/footer.twig') }}
+        {{ include('/blocks/js.twig') }}
+		<script src="/static/plugins/js/form-validator.min.js"></script>
+		<script src="/static/js/register.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,21 @@
+{% set event_name = "Astronave" %}
+{% set head_name = "Shehla Amir" %}
+{% set cohead_name = "Sana Sajid" %}
+{% set prologue = "Are you an out of the box thinker? Do you constantly wonder what it would be like to live a life beyond earth?  Do you aspire to be an engineer/entrepreneur/architect/etc ? If yes then this is the right event for you! 
+For the first time in history of Parakration LGS Paragon presents you a  space settlement design competition  'ASTRONAVE'.  During the course of this competition you will be tested on  the basis of your basic + advanced knowledge of  space and physics...... Will your design be feasible enough? So get your thinkers cap on  and get ready to have an unforgettable experience here at Astronave." %}
+{% set rules = [
+                "A team should have a 3 or 4 participants",
+                "The first answer given by the team will be considered the final answer.",
+                "Host team reserves the rights to change the format if required.",
+                "Anything that gives a team unfair advantage over the others is forbidden.",
+                "Questions may not be challenged in any of the rounds. However queries can be discussed with the host team after the event.",
+                "The final decisions regarding all matters rests with the host team."] %}
+{% set days = " " %}
+{% set day1 = [
+                {num:"1", name:"Quiz Round", desc:"In this round, each team will be given a quiz to test their general knowledge about space.<br>This round will be an hour long."},
+                {num:"2", desc:"Based on the results of the quiz the teams scoring the highest score will then form companies.<br>The teams will bid their score for the team they want in their company"} ] %}
+{% set day2 = [
+                {desc:"The companies will be given an RFP, with the help of which they have to make a proposal for a space settlement.<br>They will be given 8 hours to complete their proposal.<br>The companies will have to submit their proposals at the end of the day<br><b>Warning:</b> No plagiarism is allowed"} ] %}
+{% set day3 = [
+                {desc:"The companies will one by one present their proposals in front of the judges"} ] %}
+{% extends "events/base.html" %}

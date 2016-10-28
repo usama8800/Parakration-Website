@@ -1,0 +1,15 @@
+{% set event_name = "Tech Whizz" %}
+{% set head_name = "Usama Ahsan" %}
+{% set cohead_name = "Muneeb Kashif" %}
+{% set rules = [
+                "Host team reserves the rights to change the format if required.",
+                "The final decisions regarding all matters rests with the host team.",
+                "Participants may use the computers in the IT Lab or thier laptops.",
+                "Judging will be done based on allure and elegance"] %}
+
+{% set day1Background = "wb" %}
+{% set day1 = [
+                {num:"1", desc:"Participants will have to make a new poster, logo and icon for Parakration 6. The logo and icon will be used in the website which will have a Red, Blue and White theme. The time for this round is 2.5 hours"},
+                {num:"2", desc:"Participants will have to make an interactive Red, Blue and White themed website for Parakration 6.<br><br>It should have:<ul><li>The logo you made</li><li>The icon you made as the icon</li><li>An about section (text will be given)</li><li>List of all the events which will be given</li><li>A contact section</li></ul>"},
+                {num:"3", desc:"Participants will be given one or more pages by the management which will have a few bugs. They will be tasked with fixing these problems and linking the pages to thier website. The time for this round is 3 hours"}] %}
+{% extends "events/base.html" %}

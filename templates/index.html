@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>Parakration V</title>
+        {{ include('/blocks/head.twig', {css:[{name:"index"}]}) }}
+	</head>
+
+	<body data-spy="scroll" data-target=".scrollspy" data-offset="100">
+		{{ include('/blocks/preloader.twig') }}
+        {{ include('/blocks/navbar.twig', {index:" ", options:[
+            {text:"Home", link:"#intro", active:""},
+            {text:"About Us", link:"#about"},
+            {text:"Our Team", link:"#team"},
+            {text:"Events", link:"#events"},
+            {text:"Schedule", link:"#schedule"},
+            {text:"Register", link:"#register"},
+            {text:"Contact Us", link:"#contact"}
+        ]}) }}
+
+<!--Intro -->
+		<section id="intro">
+			<div class="container text-center valign">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="carouselWrapper">
+							<div class="owl-carousel" id="owl-intro">
+								{{ include('/blocks/introItem.twig', {main:"LGS Paragon", smalla:"Presents"}) }}
+								{{ include('/blocks/introItem.twig', {main:"Parakration", smalla:"V", sub:"Lahore's largest Science Olympiad"}) }}
+								{{ include('/blocks/introItem.twig', {main:"16", smalla:"Science Events"}) }}
+								{{ include('/blocks/introItem.twig', {smallb:"5", main:"Social Events"}) }}
+								{{ include('/blocks/introItem.twig', {smallb:"Mind Boggling", main:"Experience"}) }}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+<!-- End Intro -->
+
+<!--About -->
+		<section id="about">
+			<div class="container">
+<!--                start heading-->
+				<div class="row">
+					<div class="heading text-center">
+						<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+							<div class="sectionTitle">
+								<h2>
+									About
+									<small>Us</small>
+								</h2>
+<!--                                <span class="sub">that you need</span>-->
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="wow slideInLeft col-md-6 text-left">
+						<h3>
+							A Glimpse of
+							<small> Parakration IV</small>
+						</h3>
+						<p>
+							Parakration having a history of the past five years has not only been a success each year but has been getting bigger and better each year. Parakration IV that marked a history in the traditions of Olympiads being held nation wide, not only by spreading itself to a national scale but also with the first time in history of holding an Air Show in collaboration with Hybrid aviation and alot more. 
+						</p>
+					</div>
+					<div class="wow slideInRight col-md-6 text-center" id="teaser-wrapper">
+						<video id="teaser" preload="auto" poster="/static/img/simpleImage.png" controls>
+							<source src="/static/hd_teaser.mp4" />
+						</video>
+					</div>
+				</div>
+
+			</div>
+
+		</section>
+<!-- End About -->
+
+<!-- Clock -->
+		<section class="clock">
+			<div class="container wow fadeInUp" data-wow-delay=".2s">
+				<div class="row text-center" >
+					<div class="col-xs-3" id="days"></div>
+					<div class="col-xs-3" id="hours"></div>
+					<div class="col-xs-3" id="minutes"></div>
+					<div class="col-xs-3" id="seconds"></div>
+				</div>
+				<div class="row text-center">
+					<div class="m col-xs-3">Days</div>
+					<div class="m s col-xs-3">Hours</div>
+					<div class="m s col-xs-3">Minutes</div>
+					<div class="m s col-xs-3">Seconds</div>
+				</div>
+			</div>
+		</section>
+<!-- End Clock -->
+
+<!--Team -->
+		<section id="team">
+			<div class="container">
+				<!--heading-->
+				<div class="row">
+					<div class="heading text-center">
+						<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+							<div class="sectionTitle">
+								<i class="fa fa-users fa-3x sectionTitleIcon"></i>
+								<h2>
+									Team
+									<small>Parakration V</small>
+								</h2>
+								<span class="sub">making the event wonderful for you</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="intro-text col-md-offset-2 col-md-8 text-center">
+						Team Parakration 5 has been working tirelessly from the past 5 months to make your favourite Science Olympiad, even a better experience for you, this year.
+						<hr>
+					</div>
+				</div>
+				<!--end heading-->
+
+				<!--members-->
+				<div class="row">
+					<div class="owl-carousel" id="owl-team">
+						{{ include('/blocks/member.twig', {name:"Raheem Zafar", post:"Director General", desc:"03008462977", pic:"1", fb:"raheem.zafar.3", insta:"zafarraheem"}) }}
+						{{ include('/blocks/member.twig', {name:"Anam Ahmad", post:"Director General", desc:"03044354962", pic:"2", fb:"profile.php?id=100009284249953", insta:"anam.ahmad206"}) }}
+						{{ include('/blocks/member.twig', {name:"Fahad Farid", post:"Director General", desc:"03214178717", pic:"1", fb:"fahad.farid.507", insta:"fahad.farid.507"}) }}
+						{{ include('/blocks/member.twig', {name:"Muneeb Kashif", post:"Director Registrations", desc:"03334600488", pic:"1", fb:"muneeb.kashif", insta:"muneeb_kashif"}) }}
+						{{ include('/blocks/member.twig', {name:"Usama Ahsan", post:"Director IT", desc:"03248443888", pic:"1", fb:"ahsan8800", insta:"uusama8800"}) }}
+<!--						{{ include('/blocks/member.twig', {name:"Areeb Lutfi", post:"Director Finance", desc:"03314191779", pic:"1", fb:"areeblutfi", insta:"areebls"}) }}-->
+					</div>
+				</div>
+				<!--end members-->
+				<div class="row">
+					<div class="intro-text col-md-offset-2 col-md-8 text-center">
+						<a href="/team.php" class="btn btn-default" id="whole-team">View the whole team</a>
+					</div>
+				</div>
+			</div>
+
+		</section>
+<!-- End Team -->
+
+<!--Clients -->
+		<section id="clients">
+			<div class="container">
+				<!--heading-->
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<div class="sectionTitle">
+							<h3>
+								Our
+								<small>Sponsors</small>
+							</h3>
+						</div>
+					</div>
+				</div>
+				<!--end heading-->
+
+				<!--carousel-->
+				<div class="row">
+					<div class="col-md-12 col-xs-12 text-center">
+						<!--carousel slide-->
+						<div class="owl-carousel" id="owl-clients">
+							<a href="#"><img class="img-responsive" src="/static/img/clients/1.png" alt="Client Name"></a>
+							<a href="#"><img class="img-responsive" src="/static/img/clients/2.png" alt="Client Name"></a>
+							<a href="#"><img class="img-responsive" src="/static/img/clients/3.png" alt="Client Name"></a>
+							<a href="#"><img class="img-responsive" src="/static/img/clients/4.png" alt="Client Name"></a>
+							<a href="#"><img class="img-responsive" src="/static/img/clients/5.png" alt="Client Name"></a>
+							<a href="#"><img class="img-responsive" src="/static/img/clients/6.png" alt="Client Name"></a>
+						</div>
+
+						<!--navigation-->
+						<div class="customNavigation">
+							<a class="btn prev"><i class="fa fa-angle-left fa-3x"></i></a>
+							<a class="btn next"><i class="fa fa-angle-right fa-3x"></i></a>
+						</div>
+					</div>
+				</div>
+				<!--end carousel-->
+			</div>
+
+		</section>
+<!--end Clients -->
+
+<!--events -->
+		<section id="events">
+			<div class="container">
+				<!--heading-->
+				<div class="row">
+					<div class="heading text-center">
+						<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+							<div class="sectionTitle">
+								<h2>
+									<small>Events at</small>
+									Parakration V
+								</h2>
+								<hr class="visible-xs">
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row" id="compulsory-events">
+					<div class="intro-text col-col-xs-12 text-center">
+						 Compulsory
+					</div>
+					{{ include('/blocks/event.twig', {name:"Episteme", add_class:"col-md-offset-2", compulsory:" "}) }}
+					{{ include('/blocks/event.twig', {name:"Ideas in Action", compulsory:" "}) }}
+				</div>
+				<div class="row" id="elective-events">
+					<div class="intro-text col-xs-12 text-center">
+						 Elective
+					</div>
+					{{ include('/blocks/event.twig', {name:"Math Mania"}) }}
+					{{ include('/blocks/event.twig', {name:"Tech Whizz"}) }}
+					{{ include('/blocks/event.twig', {name:"Trebuchét"}) }}
+					{{ include('/blocks/event.twig', {name:"The Wright Way"}) }}
+					{{ include('/blocks/event.twig', {name:"Crime Scene"}) }}
+					{{ include('/blocks/event.twig', {name:"Encrypteau"}) }}
+					{{ include('/blocks/event.twig', {name:"Shoes of Sherlock"}) }}
+					{{ include('/blocks/event.twig', {name:"Astronave"}) }}
+					{{ include('/blocks/event.twig', {name:"TWOG"}) }}
+					{{ include('/blocks/event.twig', {name:"Law Drama Moot"}) }}
+					{{ include('/blocks/event.twig', {name:"Envirothon"}) }}
+					{{ include('/blocks/event.twig', {name:"Cabinet Crisis"}) }}
+					{{ include('/blocks/event.twig', {name:"Carpe Diem"}) }}
+					{{ include('/blocks/event.twig', {name:"Fandom Fever"}) }}
+				</div>
+			</div>
+		</section>
+<!--End events -->
+
+<!--Schedule -->
+		<section id="schedule">
+			<div class="container text-center">
+				<h3 id="schedule-text"><small>Schedule Coming soon...</small></h3>
+			</div>
+
+		</section>
+<!--End schedule -->
+
+<!-- Register -->
+		<section class="separator" id="register">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<a class="btn btn-default-white" href="/register.php" id="register-text"><h3>
+							<small>Register</small>
+							now!
+						</h3></a>
+					</div>
+				</div>
+			</div>
+		</section>
+<!-- End Register -->
+			
+<!-- separator -->
+		<section class="separator">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h3>
+							Get in touch with us.
+							<small> Follow our social profiles.</small>
+						</h3>
+						<div class="social-icons">
+							<a href="#"><i class="fa fa-snapchat fa-4x"></i></a>
+							<a href="https://www.facebook.com/ParaKration2013" target="_blank"><i class="fa fa-facebook-square fa-4x"></i></a>
+							<a href="https://www.instagram.com/parakration5.official" target="_blank"><i class="fa fa-instagram fa-4x"></i></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+<!-- end separator -->
+
+<!-- Contact -->
+		<section id="contact">
+
+			<div class="container">
+
+				<!--heading-->
+				<div class="row">
+					<div class="heading text-center">
+						<div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+							<div class="sectionTitle">
+								<i class="fa fa-asterisk fa-3x sectionTitleIcon"></i>
+
+								<h2>
+									Contact
+									<small>Us</small>
+								</h2>
+<!--                                <span class="sub">as soon as possible.</span>-->
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="intro-text col-md-offset-2 col-md-8 text-center">
+						 we are there for you 24/7. <br>
+						<hr class="visible-lg visible-md">
+					</div>
+				</div>
+				<!--end heading-->
+
+				<!--content-->
+				<div class="row">
+                    <div class="col-md-4 col-xs-12 col-sm-12 text-center">
+						<div class="contactItem">
+							<div class="contactIcon">
+								<i class="fa fa-user fa-3x"></i>
+								<i class="fa fa-user fa-5x biggerIcon"></i>
+							</div>
+							<div class="contactInfo">
+								<h4>
+									Director General
+									<br>
+									<small>Raheem Zafar</small>
+								</h4>
+								<p>
+									<abbr title="Email">Email:</abbr> silverdrag2010@gmail.com
+									<br>
+									<abbr title="Phone">Phone:</abbr> 0300-8462977
+								</p>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-4 col-xs-12 col-sm-12 text-center">
+						<div class="contactItem">
+							<div class="contactIcon">
+								<i class="fa fa-user fa-3x"></i>
+								<i class="fa fa-user fa-5x biggerIcon"></i>
+							</div>
+							<div class="contactInfo">
+								<h4>
+									Director General
+									<br>
+									<small>Anam Ahmad</small>
+								</h4>
+								<p>
+									<abbr title="Email">Email:</abbr> anam.ahmad206@yahoo.com
+									<br>
+									<abbr title="Phone">Phone:</abbr> 0340-4354962
+								</p>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-4 col-xs-12 col-sm-12 text-center">
+						<div class="contactItem">
+							<div class="contactIcon">
+								<i class="fa fa-user fa-3x"></i>
+								<i class="fa fa-user fa-5x biggerIcon"></i>
+							</div>
+							<div class="contactInfo">
+								<h4>
+									Director General
+									<br>
+									<small>Fahad Farid</small>
+								</h4>
+								<p>
+									<abbr title="Email">Email:</abbr> fahdfarid@gmail.com
+									<br>
+									<abbr title="Phone">Phone:</abbr> 0321-4178717
+								</p>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-4 col-md-offset-2 col-xs-12 col-sm-12 text-center">
+						<div class="contactItem">
+							<div class="contactIcon">
+								<i class="fa fa-user fa-3x"></i>
+								<i class="fa fa-user fa-5x biggerIcon"></i>
+							</div>
+							<div class="contactInfo">
+								<h4>
+									Director Registration
+									<br>
+									<small>Muneeb Kashif</small>
+								</h4>
+								<p>
+									<abbr title="Email">Email:</abbr> muneebkashif97@gmail.com
+									<br>
+									<abbr title="Phone">Phone:</abbr> 0333-4600488
+								</p>
+							</div>
+						</div>
+					</div>
+                    <div class="col-md-4 col-xs-12 col-sm-12 text-center">
+						<div class="contactItem">
+							<div class="contactIcon">
+								<i class="fa fa-user fa-3x"></i>
+								<i class="fa fa-user fa-5x biggerIcon"></i>
+							</div>
+							<div class="contactInfo">
+								<h4>
+									Director IT
+									<br>
+									<small>Usama Ahsan</small>
+								</h4>
+								<p>
+									<abbr title="Email">Email:</abbr> usama8800@gmail.com
+									<br>
+									<abbr title="Phone">Phone:</abbr> 0324-8443888
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+                
+                <div class="row">
+					<div class="col-md-4 col-xs-12 col-sm-12 text-center">
+						<div class="contactItem">
+							<div class="contactIcon">
+								<i class="fa fa-envelope fa-3x"></i>
+								<i class="fa fa-envelope fa-5x biggerIcon"></i>
+							</div>
+							<div class="contactInfo">
+								<h4>
+									Submit Us
+									<br>
+									<small>Your feedback.</small>
+								</h4>
+								<p>
+									<abbr title="Email">Email:</abbr> parakrationofficial@gmail.com
+								</p>
+							</div>
+						</div>
+					</div>
+                </div>
+
+				<div class="row">
+					<!--form-->
+					<div class="col-md-6">
+                        <div class="form-group">
+                            <input class="form-control" id="contactName" placeholder="Enter your name" type="text">
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" id="contactEmail" placeholder="Enter your email" type="email">
+                        </div>
+                        <div class="form-group">
+                            <textarea class="form-control" id="contactMsg" placeholder="Message" cols="25" rows="6">
+                            </textarea>
+                        </div>
+                        <div class="btn btn-default" id="submit-feedback">SUBMIT</div>
+                        <div id="feedback-response"></div>
+					</div>
+					<!--end form-->
+
+					<!--adress iframe-->
+					<div class="col-md-6 text-center">
+						<iframe height="450" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3400.663543070136!2d74.44986911456844!3d31.53339965365488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39190fab2aaa0833%3A0x8a5d024bcf980a43!2sLahore+Grammar+School+-+Paragon+City!5e0!3m2!1sen!2s!4v1468772308511" style="border:none;" width="600"></iframe>
+					</div>
+					<!--end adress iframe-->
+				</div>
+				<!--end content-->
+			</div>
+
+		</section>
+<!-- End Contact -->
+		{{ include('/blocks/footer.twig') }}
+        {{ include('/blocks/js.twig') }}
+		<script src="/static/js/index.js"></script>
+	</body>
+
+</html>

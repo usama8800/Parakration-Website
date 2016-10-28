@@ -1,0 +1,16 @@
+{% set event_name = "The Wright Way" %}
+{% set head_name = "Sameel Tufail" %}
+{% set cohead_name = "Salman Afzaal" %}
+{% set prologue = "In our childhood whenever an adult asked, \“What do you want to become when you grow up?\" We used to pick fascinating career paths, but as time has progressed we came under the influence of the society and have lost that spark. To all those who answered the above question with the answer \"Pilot\". Parakration is proud to present The Wright Way which will help to reignite your passion and love for flying!<br><br>The Wright Way will consist of 3 rounds in which participant will be tested on Aviation related skills with lots of added fun. The three rounds include a word game, Aeronautical Designing, Decision Making and much more." %}
+{% set rules = [
+                "A team should have 2 or 3 participants",
+                "The first answer given by the team will be considered the final answer.",
+                "Host team reserves the rights to change the format if required.",
+                "Anything that may give a team an unfair advantage over the others is forbidden; such as the use of phones during the event or verbal prompts.",
+                "Questions may not be challenged in any of the rounds. However queries can be discussed with the host team after the event.",
+                "The final decisions regarding all matters rests with the host team."] %}
+{% set day1 = [
+                {num:"1", desc:"Participants will take part in a word guessing game.The objective of the game is for a chosen individual to have their teammates guess the word on the player's card without using the word itself or five additional words listed on the card. The words will range from science to aviation.<br><b>Only the top eight teams will qualify for Round 2.</b>"},
+                {num:"2", desc:"Participants’ aeronautical designing skills and knowledge will be tested in this round. Participants will have to construct an aircraft model using the material provided by the management.<br><b>Only the top three teams will qualify for Round 3.</b>"},
+                {num:"3", desc:"Participants will experience the professional life of commercial Pilot. They will be seated in a flight simulator (FSX) for a regular schedule flight in which they will face the daily challenges of flying and the pressure Pilots have to go through when handling emergencies during flight."}] %}
+{% extends "events/base.html" %}

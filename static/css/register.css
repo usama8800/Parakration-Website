@@ -1,0 +1,59 @@
+#registrations{
+    padding-top: 150px;
+    background-color: #e6e6e6;
+    color: #282828;
+}
+#fees{
+    background-color: #282828;
+}
+#fees>.container>.row:not(:first-child), #registrations>.container>.row:not(:first-child){
+    padding-top: 25px;
+}
+#fee-table{
+    padding-left: 5%;
+}
+#fee-table>.row{
+    margin-top:15px;
+}
+#form{
+    background-color: #e6e6e6;
+    color: #282828;
+}
+ol li, ul li{
+    margin-top: 10px;
+}
+h3>tiny{
+    font-size: 14pt;
+    letter-spacing: 0;
+}
+label.pic{
+    border-radius: 4px;
+    border-color: #ccc;
+    display: flex;
+}
+label.pic span{
+    color: rgb(153,153,153);
+}
+label.pic span.selected{
+    color: #555;
+}
+select.form-control{
+    padding: 6px 9px;
+    color: rgb(153,153,153);
+}
+select.form-control.selected{
+    padding: 6px 9px;
+    color: #555;
+}
+option[disabled]{
+}
+#loading-icon{
+    text-align: center;
+    display: none;
+}
+#amends{
+    background-color: #282828;
+}
+#amends h2{
+    color: cyan;
+}

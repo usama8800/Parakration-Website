@@ -1,0 +1,21 @@
+{% set event_name = "Fandom Fever" %}
+{% set head_name = "Abiya Shah" %}
+{% set cohead_name = "Suleman Abbasi" %}
+{% set prologue = "Remember all those hours you spent behind your laptop screens binge watching your favourite tv shows as your parents told you it’s a waste of time? Well its time to prove them wrong!! This year Fandom Fever gives all you multiple fandom fans a chance to prove your dedication by testing you with all the world of entertainment has to offer. This 2 day event will test your knowledge to determine how well you know your fandom and eventually claim your rigthful position on the iron throne as the rightlful Supreme Fandom Overlord !" %}
+{% set rules = [
+                "A team should have a maximum of 3 participants",
+                "The first answer given by the team will be considered the final answer.",
+                "Host team reserves the rights to change the format if required.",
+                "Anything that gives a team unfair advantage over the others is forbidden; such as the use of phones during the event or verbal prompts in charades.",
+                "Questions may not be challenged in any of the rounds. However queries can be discussed with the host team after the event.",
+                "In case of a tie during eliminations, the host team will conduct an additional sudden death round.",
+                "The final decisions regarding all matters rests with the host team."] %}
+{% set days = " " %}
+{% set day1 = [
+                {num:"1", name:"Rapid Fire", desc:"Each team will be given a specific amount of time in which they will be asked as many questions as possible. Any member of the team can answer and the first answer will be the final answer. <b>1 point</b> will be awarded to for correct answer and  there will be no negative scoring in this round."},
+                {num:"2", name:"Quiz Round", desc:"Each team will be given a set of simple fandom based quizzes and a specific amount of time to solve them. <b>1 point</b> will be awarded for each correct answer and <b>1 point</b> will be deducted for each incorrect answer."},
+                {num:"3", name:"On Screen", desc:"Teams will be shown pictures and audio clips with simple questions accompanying them that the teams will have to answer. Each slide will be shown for a short time and will not be shown again. <b>2 point</b> will be awarded for a correct answer and <b>1 point</b> will be deducted for each incorrect answer.<br><br><b>This will be the Elimination round and according to the cumulative scores from the previous rounds, teams will be selected to move onto the fina round of the event.</b>"} ] %}
+{% set day2 = [
+                {num:"4", name:"Physical Task", desc:"Teams will be given a fandom related character or show to act out. A random team member will be chosen and will be given a bowl of chits to choose from. Each team will be given 2 minutes to act out the word. <b>5 points</b> will be awarded for each correct guess, <b>2 points</b> will be deduted for incorrect answers or if the time runs out."},
+                {num:"5", name:"Quiz Round", desc:"Teams will be asked to randomly select a card which will have a specific famdom and a task related to it. Material will be provided to each team for each specific task. They will be judged on the basis of accuracy, finesse and technique. Teams will be given points from 0-10 by the host team."} ] %}
+{% extends "events/base.html" %}

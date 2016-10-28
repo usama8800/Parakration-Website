@@ -1,0 +1,48 @@
+
+<!--MOBILE NAVIGATION /// hidden on large devices -->
+<nav class="menu slide-menu-left hidden-lg text-left">
+    <ul>
+        <li><a href="/index.php"><img src="/static/img/logo.png" alt="Logo" class="img-responsive"></a></li>
+        {% for option in options %}
+            <li {% if option.active %}class="active"{% endif %}><a href="{{ option.link }}">{{ option.text }}</a></li>
+        {% endfor %}
+        <li><a class="btn btn-default close-menu"><i class="glyphicon glyphicon-remove text-right"></i> CLOSE</a>
+        </li>
+    </ul>
+</nav>
+
+<!--nav toggler-->
+<div class="container-fluid hidden-lg">
+    <div class="sm-nav navbar-fixed-top">
+        <div class="nav-toggler toggle-slide-left"><i class="fa fa-bars sm-nav-toggler"></i></div>
+    </div>
+</div>
+<!--end nav toggler-->
+<!--end MOBILE NAVIGATION /// hidden on large devices -->
+
+
+<!-- NAVIGATION /// hidden on small devices -->
+<header class="visible-lg">
+    {% if index %}
+    <div class="container-fluid navbar-fixed-top" data-spy="affix" data-offset-top="60" data-offset-bottom="200">
+    {% else %}
+    <div class="container-fluid navbar-fixed-top" data-spy="affix">
+    {% endif %}
+        <div class="row">
+            <div class="col-md-3 text-left">
+                <a class="navbar-brand" href="/index.php"><img src="/static/img/logo.png" alt="Logo" class="img-responsive"></a>
+            </div>
+
+            <div class="col-md-9">
+                <div class="scrollspy" data-offset="300">
+                    <ul class="nav navbar-nav">
+                        {% for option in options %}
+                            <li {% if option.active %}class="active"{% endif %}><a href="{{ option.link }}">{{ option.text }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!-- end NAVIGATION /// hidden on small devices -->

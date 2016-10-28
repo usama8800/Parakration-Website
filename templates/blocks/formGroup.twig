@@ -1,0 +1,44 @@
+<div class="form-group">
+    <label for="{{ id }}" class="col-xs-12 col-sm-4 control-label">{{ label }}</label>
+    <div class="col-xs-12 col-sm-6">
+        {% if type == 'text' %}
+            <input class="form-control {% if class %}{{ class }}{% endif %}" id="{{ id }}" name="{{ id }}" placeholder="{% if placeholder %}{{ placeholder }}{% else %}{{ label }}{% endif %}" {% if attrs %}{{ attrs|raw }}{% endif %}>
+        {% elseif type == 'radio' %}
+            {% for option in options %}
+                <div class="radio">
+                    <label>
+                        <input type="radio" class="{% if class %}{{ class }}{% endif %}" name="{{ option.name }}" id="{{ option.id }}" value="{{ option.value }}" {% if option.attrs %}{{ option.attrs|raw }}{% endif %}>
+                        {% if option.label %}
+                            {{ option.label }}
+                        {% else %}
+                            {{ option.value }}
+                        {% endif %}
+                    </label>
+                </div>
+            {% endfor %}
+        {% elseif type == 'file' %}
+            <label class="form-control btn pic" for="{{ id }}">
+                <input id="{{ id }}" name="{{ id }}" type="file" style="display:none;" data-validation-optional="true" {% if attrs %}{{ attrs|raw }}{% endif %}>
+                <span id="{{ id }}-span">Choose photo...</span>
+            </label>
+        {% elseif type == 'event' %}
+            <select id="{{ id }}" name="{{ id }}" class="form-control" {% if attrs %}{{ attrs|raw }}{% endif %}>
+                <option disabled selected value>Select an event</option>
+                <option>Math Mania</option>
+                <option>Tech Whizz</option>
+                <option>Trebuchet</option>
+                <option>The Wright Way</option>
+                <option>Crime Scene</option>
+                <option>Encrypteau</option>
+                <option>Shoes of Sherlock</option>
+                <option>Astronave</option>
+                <option>The World of Gaming</option>
+                <option>Law Drama Moot</option>
+                <option>Envirothon</option>
+                <option>Cabinet Crisis</option>
+                <option>Carpe Diem</option>
+                <option>Fandom Fever</option>
+            </select>
+        {% endif %}
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<div id="delegate-{{ num }}">
+    <div class="row">
+        <div class="col-xs-12 col-md-10 col-md-offset-1">
+            <h3>Delegate {{ num }}</tiny></h3>
+        </div>
+    </div>
+    {{ include('/blocks/formGroup.twig', {type:"text", label:"Delegate Name", id:"delegate-#{ num }-name", attrs:'data-validation="custom" data-validation-regexp="^[- -zA-Z\']+$" data-validation-error-msg="That is not a valid name"'}) }}
+    {{ include('/blocks/formGroup.twig', {type:"file", label:"Photograph", id:"delegate-#{ num }-pic", attrs:'accept="image/*"'}) }}
+    {{ include('/blocks/formGroup.twig', {type:"text", label:"Delegate Number", id:"delegate-#{ num }-number", attrs:'data-validation="custom" data-validation-regexp="\\+?[0-9\\- ]+$" data-validation-error-msg="That is not a valid number"'}) }}
+    {{ include('/blocks/formGroup.twig', {type:"text", label:"Delegate Email", id:"delegate-#{ num }-email", attrs:'data-validation="email"'}) }}
+</div>

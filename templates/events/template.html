@@ -1,0 +1,20 @@
+{% set event_name = "" %}
+{% set head_name = "" %}
+{% set cohead_name = "Suleman Abbasi" %} <!-- If there is a co head -->
+{% set prologue = "" %}
+{% set rules = [
+                "A team should have a maximum of 3 participants",
+                "The first answer given by the team will be considered the final answer.",
+                "Host team reserves the rights to change the format if required.",
+                "Anything that give a team unfair advantage over the others is forbidden; such as the use of phones during the event or verbal prompts in charades.",
+                "Questions may not be challenged in any of the rounds. However queries can be discussed with the host team after the event.",
+                "In case of a tie during eliminations, the host team will conduct an additional sudden death round.",
+                "The final decisions regarding all matters rests with the host team."] %}
+{% set days = " " %} <!-- If the rounds are divided in days -->
+
+<!-- day1 day2 day3 -->
+{% set day1 = [
+                {num:"", name:"", desc:""} ] %}
+<!--            num: if round
+                name: if round has name -->
+{% extends "events/base.html" %}

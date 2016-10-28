@@ -1,0 +1,40 @@
+#head{
+    padding-top: 150px;
+}
+#coheadxs {
+    margin-top: 35px;
+}
+#rules li{
+    padding-top:5px;
+}
+.prologue{
+    color: #e6e6e6;
+    font-family: "Raleway";
+    font-weight: 300;
+    font-size: 1.3em;
+    line-height: 1.6em;
+    text-align: justify;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+ul, ul li{
+    margin-top: 10px;
+    font-size: 15px;
+}
+.roundText{
+    padding-left: 5%;
+    padding-right: 10%;
+}
+.bb{
+    background-color: #282828;
+}
+.bb h2, .bb .sub, .bb h4{
+    color: #e6e6e6;
+}
+.wb{
+    background-color: #e6e6e6;
+    color: #282828;
+}
+.day .row:not(:first-child){
+    padding-top:15px;
+}

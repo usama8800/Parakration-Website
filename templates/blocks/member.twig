@@ -1,0 +1,21 @@
+<div class="member text-center {% if notC %}col-xs-6 col-sm-4 col-md-3{% endif %}">
+	<div class="memberName">
+		{{ name|raw }}
+	</div>
+	<{% if notC %}div{% else %}span{% endif %} class="memberJob sub">{{ post }}</{% if notC %}div{% else %}span{% endif %}>
+    {% if desc or fb or insta %}
+	<{% if notC %}span{% else %}div{% endif %} class="memberDescription">
+        {% if not notC %}<br>{% endif %}
+		{% if desc %} {{ desc }} {% endif %}
+		<br>
+		{% if fb %}
+			<a href="https://www.facebook.com/{{ fb }}" target="_blank"><i class="fa fa-facebook fa-lg"></i></a>
+		{% endif %}
+		{% if insta %}
+		<a href="https://www.instagram.com/{{ insta }}" target="_blank"><i class="fa fa-instagram fa-lg"></i></a>
+		{% endif %}
+        <br>
+	</{% if notC %}span{% else %}div{% endif %}>
+    {% endif %}
+	<img class="member-pic" alt="img-responsive" src="/static/img/team/{{ name|lower|raw }}.png" onerror="this.onerror=null;this.src='/static/img/team/1.png';">
+</div>

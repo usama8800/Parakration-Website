@@ -1,0 +1,31 @@
+#directors{
+    padding-top: 150px;
+    background-color: white;
+}
+.member{
+    padding-bottom: 1px;
+    padding-top: 1px;
+    margin-top: 19px;
+    margin-bottom: 6%;
+}
+.memberName {
+    color: #300743;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.member-pic {
+    width: 100%;
+}
+.memberDescription {
+    padding-top: 100px;
+    color: #282828;
+}
+.memberJob {
+    margin-bottom: 7px;
+    height: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

@@ -1,0 +1,451 @@
+#feedback-response {
+    margin-top: 15px;
+    display: none;
+    align-items: center;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+            /* #Intro */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+#intro {
+    padding: 0;
+}
+
+#intro .introItem h1{
+    padding-bottom:30px;
+}
+
+#intro .introItem{
+    padding-bottom:10px;
+}
+
+#intro .introItem h1, #intro .introItem h1 small{
+    color:white;
+}
+
+
+#intro .introItem i, #intro .next{
+    color:white; /* #intro text icon color */
+}
+
+.maskWrapper{
+    opacity:0.7;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+            /* #about */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+#about {
+    background-color: white;
+    position:relative;
+}
+
+#about .icon{
+    margin-bottom:30px;
+}
+
+#about .icon > i{
+    -webkit-transition: all 500ms ease-in-out;
+    -moz-transition: all 500ms ease-in-out;
+    -ms-transition: all 500ms ease-in-out;
+    -o-transition: all 500ms ease-in-out;
+}
+#about .item:hover .icon > i{
+    color:#300743;
+}
+
+#teaser-wrapper video{
+    /*width: 100%;*/
+    height: 100%;
+}
+
+.clock{
+    background-color:#282828;
+}
+
+#days, #hours, #minutes, #seconds {
+    font-size: 6vw;
+    color: cyan;
+}
+#hours, #minutes, #seconds {
+    border-style: solid;
+    border-color: #1aa5a5;
+    border-width: 0;
+    border-left-width: 3px;
+}
+.m {
+    color: cyan;
+    font-size: 2vw;
+}
+.s {
+    border-style: solid;
+    border-color: #1aa5a5;
+    border-width: 0;
+    border-left-width: 3px;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+            /* #Team */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+
+#team{
+    background: white;
+    padding-bottom:0;
+}
+
+#team .member img{
+    max-width: 100%;
+    height: auto;
+}
+
+#whole-team {
+    margin-top: 2%;
+}
+
+.memberName{
+    color:#300743;
+    font-size:20px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-transform:uppercase;
+}
+
+
+.memberJob {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.memberDescription{
+    font-size:12px;
+    line-height:22px;
+    padding:0 40px;
+    height:70px;
+}
+
+
+.member p i{
+    margin:5px;
+}
+
+#team .owl-carousel {
+    margin-bottom: -10px;
+}
+
+#team  .owl-theme .owl-controls .owl-buttons div {
+    position: absolute;
+    color: #300743;
+    background-color: transparent;
+}
+#team  .owl-theme .owl-controls .owl-buttons .owl-prev{
+    left: 0;
+    top: 300px;
+}
+#team  .owl-theme .owl-controls .owl-buttons .owl-next{
+    right: 0;
+    top: 300px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+            /* #Clients */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#clients{
+    background: url(/static/img/sponsor-background.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat;
+    background-position: bottom;
+}
+
+#clients .customNavigation a{
+    color:white;
+}
+
+#clients h3, #clients h3 small{
+    color:white;
+}
+
+#clients a img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+          /* #events */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+#events{
+    background-color: white;
+}
+
+#events i{
+    color:#300743;
+}
+#events .serviceIcon{
+    float:left;
+    padding-top:20px;
+}
+
+#events .biggerIcon{
+    top:20%;
+    position:absolute;
+    opacity:0.07;
+}
+
+#events .serviceInfo{
+    text-align:left;
+    padding-left: 60px;
+    padding-top: 2px;
+}
+
+#elective-events {
+    padding-top: 5%;
+}
+#elective-events .intro-text{
+    margin-bottom: 0;
+}
+
+#events .serviceInfo p{
+    line-height:24px;
+}
+
+
+.tableWrapper{
+    background-color:#300743;
+    padding:20px;
+    margin-top:30px;
+    margin-bottom:30px;
+}
+
+.recommended{
+    padding-top:50px;
+    padding-bottom:60px;
+    margin-top:0;
+}
+
+.subscriptionList ul{
+    list-style:none;
+    padding:0;
+}
+
+.subscriptionName h3{
+    color:white;
+}
+
+#events .rating i {
+    color:white;
+}
+
+.rating{
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+.subscriptionPrice{
+    width:200px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.subscriptionList ul li{
+    font-size:12px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    line-height: 40px;
+    color: white;
+    border-bottom:1px solid #454545;
+}
+
+.subscriptionList ul li:last-child{
+    border-bottom:none;
+}
+
+.tableWrapper .btn{
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+
+}
+/*hover effect*/
+.trim {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.trim:before {
+    content: '';
+    position: absolute;
+    border: white solid 2px;
+    top: 6px;
+    left: 6px;
+    right: 6px;
+    bottom: 6px;
+    opacity: 0;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: opacity;
+    transition-property: opacity;
+}
+.trim:hover:before, .trim:focus:before, .trim:active:before {
+    opacity: 1;
+}
+
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        /*. #schedule */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+
+#schedule{
+    background: url(/static/img/schedule.jpg);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+#schedule h3, #schedule h3 small{
+    color:white;
+}
+
+#schedule  .testimonial-slide{
+    color:white;
+}
+
+#schedule  .testimonial-slide p{
+    font-style:italic;
+    font-size:18px;
+    color:white;
+}
+
+#schedule .testimonial-slide .testimonial-name{
+    text-transform:uppercase;
+    font-weight:700;
+    letter-spacing:0px;
+}
+
+#schedule .testimonial-slide .testimonial-job{
+    font-weight:300;
+    letter-spacing:0px;
+    font-style:italic;
+    font-size:10px;
+
+}
+
+#schedule .customNavigation a{
+    color:white;
+}
+
+#schedule .owl-theme .owl-controls .owl-page span{
+    margin-top:30px;}
+
+#schedule-text {
+    padding-top: 15%;
+    padding-bottom: 15%;
+}
+
+.owl-item {
+/*    display: flex;*/
+    height: 100%;
+    justify-content: center;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+   /*. #social icons separator */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+.social-icons {
+    margin-top:30px;
+}
+.social-icons a{
+    color:white;
+    margin:20px;
+}
+
+.social-icons a:hover{
+    color:#e9e9e9;
+}
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+           /*. #Contact */
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+#contact{
+    background:white;
+}
+
+#contact .contactIcon{
+    float:left;
+    color: #300743;
+    padding-top:20px;
+}
+
+#contact .biggerIcon{
+    top:20%;
+    position:absolute;
+    opacity:0.07;
+}
+
+#contact .contactInfo{
+    text-align:left;
+    padding-left: 60px;
+    padding-top: 2px;
+}
+
+#contact .contactInfo p{
+    line-height:24px;
+}
+
+iframe{
+    border:none;
+}
+
+.form-control:focus {
+    border-color: #300743;
+    outline: 0;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 10px 10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    transition: none;
+    font-family: 'Raleway', sans-serif;
+    margin-top:0px;
+}
+
+input{
+    width:200px;
+}
+
+#contact iframe{
+    margin-top:10px;
+    max-width:100%;
+}

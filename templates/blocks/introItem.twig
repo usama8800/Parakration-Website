@@ -1,0 +1,14 @@
+<div class="introItem">
+	<h1>
+		{% if smallb %}
+			<small>{{ smallb }}</small>
+		{% endif %}
+		{{ main }}
+		{% if smalla %}
+			<small>{{ smalla }}</small>
+		{% endif %}
+	</h1>
+	{% if sub %}
+		<span class="subWhite">{{ sub }}</span>
+	{% endif %}
+</div>

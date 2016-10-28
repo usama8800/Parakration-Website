@@ -1,0 +1,11 @@
+<div class="col-md-4 col-sm-6 col-xs-12 text-center {%if add_class %}{{ add_class }}{% endif %}">
+	<div class="tableWrapper trim {% if compulsory %}recommended{% endif %}">
+		<div class="subscriptionName">
+			<h3>{{ name }}</h3>
+		</div>
+		<div class="subscriptionPrice">
+			<img class="img-responsive" src="/static/img/event_logo/{{ name|lower }}.gif" onerror="this.onerror=null;this.src='/static/img/event_logo/junk.gif';">
+		</div>
+		<a class="btn btn-default-white" href="/event.php?event={{ name|lower }}">Enter event</a>
+	</div>
+</div>

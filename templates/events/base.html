@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>Parakration V</title>
+        {{ include('/blocks/head.twig', {css:[{name:"event"}]}) }}
+	</head>
+
+	<body>
+		{{ include('/blocks/preloader.twig') }}
+        {{ include('/blocks/navbar.twig', {options:[
+            {text:"Home", link:"/index.php"},
+            {text:"Register", link:"/register.php", active:""}
+        ]}) }}
+        <section id="head" class="wb"> 
+            <div class="container">
+                <div class="row">
+                    <div class="wow zoomIn heading text-center col-sm-offset-2 col-sm-8 col-xs-12">
+                        <div class="sectionTitle">
+                            <h2>
+                                {{ event_name }}
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                {% if head_name %}
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-sm-offset-1 text-center">
+                        <img src="/static/img/team/{{ head_name|lower }}.png" class="img-responsive head-pic" onerror="this.onerror=null;this.src='/static/img/team/1.png';">
+                    </div>
+                    {% if cohead_name %}
+                    <div class="hidden-xs col-sm-5 col-sm-offset-1 text-center">
+                        <img src="/static/img/team/{{ cohead_name|lower }}.png" class="img-responsive head-pic" onerror="this.onerror=null;this.src='/static/img/team/1.png';">
+                    </div>
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-5 col-sm-offset-1 text-center">
+                        <h3>{{ head_name }}</h3><h3>Event Head</h3>
+                    </div>
+                    {% if cohead_name %}
+                    <div class="hidden-xs col-sm-5 col-sm-offset-1 text-center">
+                        <h3>{{ cohead_name }}</h3><h3>Event Co-Head</h3>
+                    </div>
+                    {% endif %}
+                </div>
+                {% endif %}
+                {% if cohead_name %}
+                <div class="row visible-xs" id="coheadxs">
+                    <div class="col-xs-12 text-center">
+                        <img src="/static/img/team/{{ cohead_name|lower }}.png" class="img-responsive head-pic" onerror="this.onerror=null;this.src='/static/img/team/1.png';">
+                    </div>
+                </div>
+                <div class="row visible-xs">
+                    <div class="col-xs-12 text-center">
+                        <h3>{{ cohead_name }}</h3><h3>Event Co-Head</h3>
+                    </div>
+                </div>
+                {% endif %}
+            </div>
+        </section>
+        
+        {% if prologue %}
+        <section id="prologue" class="bb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1 prologue">
+                        {{ prologue|raw }}
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        
+        {% block afterPrologue %}{% endblock %}
+        
+        {% if rules %}
+        <section id="rules" class="{% if prologue %}wb{% else %}bb{% endif %}">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        {% if rulesHeading %}
+                            {{ rulesHeading|raw }}
+                        {% else %}
+                            <h3>Rules<small> and </small>Regulations</h3>
+                        {% endif %}
+                        <ul>
+                        {% for rule in rules %}
+                            <li>{{ rule|raw }}</li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        {% endif %}
+        
+        {% block afterRules %}{% endblock %}
+        
+        {% if day1 %}
+        <section id="day1" class="day {% if day1Background %}{{ day1Background }}{% else %}bb{% endif %}">
+            <div class="container">
+                {% if days %}
+                <div class="row">
+                    <div class="wow zoomIn heading text-center col-sm-offset-2 col-sm-8 col-xs-12">
+                        <div class="sectionTitle">
+                            <h2>
+                                Day 1
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% for round in day1 %}
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        {% if round.num %}
+                            <h3><small>Round {{ round.num }}</small> {% if round.name %}{{ round.name }}{% endif %}</h3>
+                        {% endif %}
+                        {% if round.heading %}
+                            <h3>{{ round.heading|raw }}</h3>
+                        {% endif %}
+                        <div class="roundText">{{ round.desc|raw }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+        
+        {% if day2 %}
+        <section id="day2" class="day {% if day2Background %}{{ day2Background }}{% else %}wb{% endif %}">
+            <div class="container">
+                {% if days %}
+                <div class="row">
+                    <div class="wow zoomIn heading text-center col-sm-offset-2 col-sm-8 col-xs-12">
+                        <div class="sectionTitle">
+                            <h2>
+                                Day 2
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% for round in day2 %}
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        {% if round.num %}
+                            <h3><small>Round {{ round.num }}</small> {% if round.name %}{{ round.name }}{% endif %}</h3>
+                        {% endif %}
+                        {% if round.heading %}
+                            <h3>{{ round.heading|raw }}</h3>
+                        {% endif %}
+                        <div class="roundText">{{ round.desc|raw }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+        
+        {% if day3 %}
+        <section id="day3" class="day {% if day3Background %}{{ day3Background }}{% else %}bb{% endif %}">
+            <div class="container">
+                {% if days %}
+                <div class="row">
+                    <div class="wow zoomIn heading text-center col-sm-offset-2 col-sm-8 col-xs-12">
+                        <div class="sectionTitle">
+                            <h2>
+                                Day 3
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                {% endif %}
+                {% for round in day3 %}
+                <div class="row">
+                    <div class="col-xs-12 col-sm-10 col-sm-offset-1">
+                        {% if round.num %}
+                            <h3><small>Round {{ round.num }}</small> {% if round.name %}{{ round.name }}{% endif %}</h3>
+                        {% endif %}
+                        {% if round.heading %}
+                            <h3>{{ round.heading|raw }}</h3>
+                        {% endif %}
+                        <div class="roundText">{{ round.desc|raw }}</div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+        {% endif %}
+        
+		{{ include('/blocks/footer.twig') }}
+        {{ include('/blocks/js.twig') }}
+		<script src="/static/plugins/js/form-validator.min.js"></script>
+		<script src="/static/js/event.js"></script>
+	</body>
+
+</html>

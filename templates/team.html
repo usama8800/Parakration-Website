@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html lang="en">
+	<head>
+		<title>Parakration V</title>
+        {{ include('/blocks/head.twig', {css:[{name:"team"}]}) }}
+	</head>
+
+	<body>
+		{{ include('/blocks/preloader.twig') }}
+        {{ include('/blocks/navbar.twig', {options:[
+            {text:"Home", link:"/index.php"},
+            {text:"Register", link:"/register.php"}
+        ]}) }}
+
+        <section id="directors">
+            <div class="container">
+                <div class="row">
+                    <div class="wow zoomIn heading text-center col-md-offset-2 col-md-8 col-xs-12">
+                        <div class="sectionTitle">
+                            <h2>
+                                Directorate
+                            </h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="row row-eq-height">
+                    {{ include('/blocks/member.twig', {notC:" ", name:"Raheem Zafar", post:"Director General", desc:"03008462977", fb:"raheem.zafar.3", insta:"zafarraheem"}) }}
+                    {{ include('/blocks/member.twig', {notC:" ", name:"Anam Ahmad", post:"Director General", desc:"03404354962", fb:"profile.php?id=100009284249953", insta:"anam.ahmad206"}) }}
+                    {{ include('/blocks/member.twig', {notC:" ", name:"Fahad Farid", post:"Director General", desc:"03214178717", fb:"fahad.farid.507", insta:"fahad.farid.507"}) }}
+                    {{ include('/blocks/member.twig', {notC:" ", name:"Muneeb Kashif", post:"Director Registrations", desc:"03334600488", fb:"muneeb.kashif", insta:"muneeb_kashif"}) }}
+                    {{ include('/blocks/member.twig', {notC:" ", name:"Usama Ahsan", post:"Director IT", desc:"03248443888", fb:"ahsan8800", insta:"uusama8800"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Areeb Lutfi", post:"Director Finance", desc:"03314191779", fb:"areeblutfi", insta:"areebls"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Mohid Amir", post:"Director Logistics", desc:"03074731114", fb:"Mohid.Amir.261", insta:"mohid261"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Izza Saif", post:"Director Logistics", desc:"03244377830", fb:"izza.saif.9", insta:"izzasaif"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Shahrukh Kemall", post:"Director Security", desc:"03218402677", fb:"shahrukh.kemall", insta:"shahrukhkemall"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Fatima Zahid", post:"Director Security", desc:"03204515191", fb:"fatima.zahidb", insta:"fatimazahid_"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Alizeh Jaffri", post:"Co-Director Security", desc:"03342305406", fb:"alazaaaay", insta:"alizeh.j"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Arooj Kaleem", post:"Director Socials", desc:"03224633768", fb:"arooj.kaleem", insta:"aroojkaleem"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Ayesha Haq", post:"Director Communications", desc:"03323363408", fb:"ayesha.anwar.94", insta:"ayeshaq408"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Abdullah&nbsp;Shahzad", post:"Co-Director Communications", desc:"03316649932", fb:"abdullah.shahzad.52", insta:"abdullah_shahzad11"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Ahmad Nadeem", post:"Director Accomodations", desc:"03024615370", fb:"ahmad.nadeem.129", insta:"ahmadnadeem7"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Faateh bin Hamad", post:"Director Media", desc:"03211459885", fb:"faateh.binhamad", insta:"faatehhamad"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Duaa Kundi", post:"Co-Director Media", desc:"", fb:"duaakundi", insta:""}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Dania Khan", post:"Director Photography", desc:"03368735783", fb:"", insta:"daniakhan_"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Hijab Fatima", post:"Director Entertainment", desc:"03231489005", fb:"hijaab.fatima.7", insta:"hijaabfatima"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Ifrah Humayun", post:"Director Publications", desc:"03328257108", fb:"ifrah.humayun.58", insta:"ifrahhumayun_"}) }}
+				</div>
+                <div class="row"><div class="col-xs-12"><hr></div></div>
+                <div class="row">
+                    <div class="wow zoomIn heading text-center col-md-offset-2 col-md-8 col-xs-12">
+                        <div class="sectionTitle">
+                            <h2>
+                                Event Heads
+                            </h2>
+                        </div>
+                    </div>                    
+                </div>
+                <div class="row">
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Areeb Lutfi", post:"Episteme Head", desc:"03314191779", fb:"areeblutfi", insta:"areebls"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Amir Arif", post:"Encryteau Head", desc:"03217778395", fb:"amir.arif.319452", insta:"amir.arif12"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Noor Mazari", post:"Law Drama Moot Head", desc:"03361089666", fb:"", insta:""}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Shehla Amir", post:"Astronave Head", desc:"03354455635", fb:"profile.php?id=100010031947481", insta:"shehla_amir_"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Sana Sajid", post:"Astronave Co-Head", desc:"03130455956", fb:"sana.sajid.92", insta:"sanasajid1"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Ayesha Ahmad", post:"Crime Scene Head", desc:"03334339928", fb:"profile.php?id=100010607583044", insta:"ayeshaahmad8888"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Maira Asaad", post:"Shoes of Sherlock Head", desc:"03226247222", fb:"mairaasaad017", insta:""}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Usman Ghani", post:"Envirothon Head", desc:"03334940848", fb:"syed.u.ghani", insta:""}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Omair Faqah", post:"Envirothon Co-Head", desc:"03022113965", fb:"omair.f.rehman", insta:"omair_faqah_ur_rehman"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Uzair Ahmed", post:"Math Mania Head", desc:"03314228730", fb:"buzair", insta:"bhatti_uzair"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Adeel Ghafoor", post:"Math Mania Co-Head", desc:"03134224469", fb:"adee.ghafoor2", insta:"adeel_ghafoor"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Abiya Shah", post:"Fandom Fever Head", desc:"03345069129", fb:"", insta:"abiya.s"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Suleman Abbasi", post:"Fandom Fever Co-Head", desc:"03334422132", fb:"suleman.abbasi.5", insta:"sulemanabbasi666"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Danial Ahmed", post:"Cabinet Crisis Head", desc:"03209404725", fb:"DJDANIBABA", insta:"chaudery__danial"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Usama Ahsan", post:"Tech Whizz Head", desc:"03248443888", fb:"ahsan8800", insta:"uusama8800"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Muneeb Kashif", post:"Tech Whizz Co-Head", desc:"03334600488", fb:"muneeb.kashif", insta:"muneeb_kashif"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Talha Wali", post:"Trebuchet Head", desc:"03208440345", fb:"talha.wali.7", insta:""}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Sameel Tufail", post:"The Wright Way Head", desc:"03364445558", fb:"sameel.tufail", insta:""}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Mannan Zaib", post:"Ideas in Action Head", desc:"03204826964", fb:"mannanzaibbhatti", insta:"mannanzaib"}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Ahmad Faraz", post:"Carpe Diem Head", desc:"03201475220", fb:"ahmad.faraz.15", insta:""}) }}
+				    {{ include('/blocks/member.twig', {notC:" ", name:"Zain Kaleem", post:"TWOG Head", desc:"03104824391", fb:"zain.haroon.92", insta:"zain.haroon"}) }}
+                </div>
+            </div>
+        </section>
+		{{ include('/blocks/footer.twig') }}
+        {{ include('/blocks/js.twig') }}
+	</body>
+
+</html>
